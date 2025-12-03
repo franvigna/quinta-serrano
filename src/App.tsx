@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { CalendarioMensual } from './components/CalendarioMensual';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+
+  const meses = [
+    'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+  ];
+
+  const mesAnterior = () => {
+    const newDate = new Date(currentDate);
+     newDate.setMonth(newDate.getMonth() - 1);
+    
+    setCurrentDate(newDate);
+  };
+
+  const mesSiguiente = () => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() + 1);
+    setCurrentDate(newDate);
+  };
+
+  const irHoy = () => {
+    setCurrentDate(new Date());
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="app">
+      <div className="app__header">
+        <button onClick={irHoy} className="app__btn-hoy">
+          Hoy
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+        <div className="app__navegacion">
+          <button onClick={mesAnterior} className="app__btn-nav">
+            ‹
+          </button>
+          <button onClick={mesSiguiente} className="app__btn-nav">
+            ›
+          </button>
+        </div>
+
+        <h1 className="app__titulo">
+          {meses[currentDate.getMonth()]} {currentDate.getFullYear()}
+        </h1>
+
+        <div className="app__spacer"></div>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <div className="app__calendario">
+          <CalendarioMensual 
+            currentDate={currentDate}
+            selectedDate={selectedDate}
+            onSelectDate={setSelectedDate}
+          />
+
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

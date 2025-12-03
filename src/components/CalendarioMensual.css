@@ -1,0 +1,74 @@
+.calendario-mensual {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  color: #000;
+}
+
+.calendario-mensual__header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.calendario-mensual__dia-semana {
+  padding: 12px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: #70757a;
+}
+
+.calendario-mensual__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  flex: 1;
+  gap: 0;
+  background: #fff;
+}
+
+.calendario-mensual__celda {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  opacity: 1;
+  transition: background 0.2s;
+  min-height: 80px;
+}
+
+.calendario-mensual__celda--otro-mes {
+  opacity: 0.4;
+}
+
+.calendario-mensual__celda--selected {
+  background: #e8f0fe;
+}
+
+.calendario-mensual__celda:hover:not(.calendario-mensual__celda--selected) {
+  background: #f5f5f5;
+}
+
+.calendario-mensual__numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: transparent;
+  color: #000;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.calendario-mensual__numero--hoy {
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 500;
+}

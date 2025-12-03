@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #fff;
+  color: #000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app__header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 16px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__btn-hoy {
+  padding: 8px 24px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background: #fff;
+  color: #3c4043;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app__btn-hoy:hover {
+  background: #f8f9fa;
 }
 
-.card {
-  padding: 2em;
+.app__navegacion {
+  display: flex;
+  gap: 8px;
 }
 
-.read-the-docs {
-  color: #888;
+.app__btn-nav {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__btn-nav:hover {
+  background: #f1f3f4;
+}
+
+.app__titulo {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #3c4043;
+}
+
+.app__spacer {
+  flex: 1;
+}
+
+.app__selector-vista {
+  display: flex;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.app__btn-vista {
+  padding: 8px 16px;
+  border: none;
+  background: #fff;
+  color: #3c4043;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app__btn-vista:not(:first-child) {
+  border-left: 1px solid #dadce0;
+}
+
+.app__btn-vista--active {
+  background: #e8f0fe;
+  color: #1967d2;
+}
+
+.app__btn-vista:hover:not(.app__btn-vista--active) {
+  background: #f8f9fa;
+}
+
+.app__calendario {
+  flex: 1;
+  overflow: hidden;
 }
