@@ -13,6 +13,7 @@
   border-bottom: 2px solid var(--color-principal);
   gap: 16px;
   background: var(--color-principal);
+  justify-content: space-evenly;
 }
 
 .app__btn-hoy {
@@ -60,12 +61,16 @@
 .app__titulo-container {
   position: relative;
 }
-
+.app__controles {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 .app__titulo {
   font-size: 22px;
   font-weight: 500;
   margin: 0;
-  color: var(--color-secundario-oscuro);
+  color: #ffffff;
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 4px;
@@ -91,7 +96,10 @@
   padding: 16px;
   min-width: 400px;
 }
-
+.titulo__quinta{
+  text-align: center;
+  color: #ffffff;
+}
 .app__selector-meses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -148,10 +156,6 @@
   background: var(--color-principal);
   color: var(--color-fondo);
   font-weight: 500;
-}
-
-.app__spacer {
-  flex: 1;
 }
 
 .app__calendario {

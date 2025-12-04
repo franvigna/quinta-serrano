@@ -45,30 +45,33 @@ function App() {
   const anioActual = currentDate.getFullYear();
   const anios = Array.from({ length: 9 }, (_, i) => anioActual - 3 + i);
 
-
   return (
     <div className="app">
       <div className="app__header">
-        <button onClick={irHoy} className="app__btn-hoy">
-          Hoy
-        </button>
+        <div className="app__controles">
+          <button onClick={irHoy} className="app__btn-hoy">
+            Hoy
+          </button>
 
-        <div className="app__navegacion">
-          <button onClick={mesAnterior} className="app__btn-nav">
-            ‹
-          </button>
-          <button onClick={mesSiguiente} className="app__btn-nav">
-            ›
-          </button>
+          <div className="app__navegacion">
+            <button onClick={mesAnterior} className="app__btn-nav">
+              ‹
+            </button>
+            <button onClick={mesSiguiente} className="app__btn-nav">
+              ›
+            </button>
+          </div>
         </div>
 
+        <h1 className='titulo__quinta'>Quinta Serrano</h1>
+
         <div className="app__titulo-container">
-          <h1 
+          <h2 
             className="app__titulo"
             onClick={() => setMostrarSelector(!mostrarSelector)}
           >
             {meses[currentDate.getMonth()]} {currentDate.getFullYear()}
-          </h1>
+          </h2>
 
           {mostrarSelector && (
             <div className="app__selector">
@@ -97,8 +100,6 @@ function App() {
             </div>
           )}
         </div>
-
-        <div className="app__spacer"></div>
       </div>
 
       <div className="app__calendario">

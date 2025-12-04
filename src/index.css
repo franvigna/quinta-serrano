@@ -5,9 +5,12 @@
 }
 
 :root {
-  --color-principal: #4c98b5;
-  --color-principal-hover: #3a7a92;
-  --color-secundario-claro: #ccecf8;
+  /* --color-principal: #4c98b5; */
+  --color-principal: #78c5e0;
+  
+  /* --color-principal-hover: #3a7a92; */
+  --color-principal-hover: #5fa9c4;
+  --color-secundario-claro: #cfe9f3;
   --color-secundario-oscuro: #013e67;
   --color-fondo: #ffffff;
   --color-texto: #2c3e50;

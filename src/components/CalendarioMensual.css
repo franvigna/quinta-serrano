@@ -68,9 +68,11 @@
   height: 32px;
   border-radius: 50%;
   background: transparent;
-  color: var(--color-texto);
+  color: #000000;
   font-weight: 500;
   font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .calendario-mensual__numero--hoy {
@@ -78,4 +80,41 @@
   color: var(--color-fondo);
   font-weight: 600;
   box-shadow: 0 2px 6px rgba(76, 152, 181, 0.3);
+}
+
+.calendario-mensual__numero--favorito {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.calendario-mensual__numero--favorito::before {
+  content: '♥';
+  position: absolute;
+  font-size: 96px;
+  color: var(--color-principal);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: heartPop 0.3s ease;
+}
+
+.calendario-mensual__numero--favorito.calendario-mensual__numero--hoy {
+  color: #ffffff;
+}
+
+@keyframes heartPop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
