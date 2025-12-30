@@ -4,17 +4,35 @@
   padding: 0;
 }
 
+/* Fuentes gratuitas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Pacifico&family=Poppins:wght@400;500;600&family=Nunito:wght@300;400;600;700&family=Comfortaa:wght@300;400;600&display=swap');
+
 :root {
-  /* --color-principal: #4c98b5; */
-  --color-principal: #78c5e0;
-  
-  /* --color-principal-hover: #3a7a92; */
-  --color-principal-hover: #5fa9c4;
-  --color-secundario-claro: #cfe9f3;
-  --color-secundario-oscuro: #013e67;
+  --color-principal: #21C7FC;
+  --color-principal-hover: #1BA8D9;
+  --color-secundario-claro: #E8F8FD;
+  --color-secundario-oscuro: #0D5F7A;
   --color-fondo: #ffffff;
   --color-texto: #2c3e50;
   --color-borde: #d4dce2;
+  --color-texto-verde: #2D5016;
+  --color-fondo-calendario: rgba(255, 255, 255, 0.75);
+  
+  /* Tipografías - ELIGE UNA DE LAS OPCIONES */
+  
+  /* OPCIÓN 1: Fredoka (recomendada, muy redondeada) */
+  --font-numeros: 'Fredoka', sans-serif;
+  
+  /* OPCIÓN 2: Nunito (números limpios y redondos) */
+  /* --font-numeros: 'Nunito', sans-serif; */
+  
+  /* OPCIÓN 3: Comfortaa (muy redondeada) */
+  /* --font-numeros: 'Comfortaa', sans-serif; */
+  
+  /* Resto de fuentes */
+  --font-bubbleboddy: 'Fredoka', sans-serif;
+  --font-mistrully: 'Pacifico', cursive;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 body {
