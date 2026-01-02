@@ -1,11 +1,26 @@
+/* Fuentes de Google Fonts - SIEMPRE PRIMERO */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap');
+
+/* Fuentes locales - BubbleBody Neue */
+@font-face {
+  font-family: 'BubbleBody Neue';
+  src: url('/fonts/BubbleboddyNeue-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BubbleBody Neue';
+  src: url('/fonts/BubbleBodyNeue-Thin.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-/* Fuentes gratuitas de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Pacifico&family=Poppins:wght@400;500;600&family=Nunito:wght@300;400;600;700&family=Comfortaa:wght@300;400;600&display=swap');
 
 :root {
   --color-principal: #21C7FC;
@@ -18,21 +33,26 @@
   --color-texto-verde: #2D5016;
   --color-fondo-calendario: rgba(255, 255, 255, 0.75);
   
-  /* Tipografías - ELIGE UNA DE LAS OPCIONES */
+  /* Tipografías */
   
-  /* OPCIÓN 1: Fredoka (recomendada, muy redondeada) */
-  --font-numeros: 'Fredoka', sans-serif;
+  /* Título del mes: BubbleBody Neue (normal) */
+  --font-mes: 'BubbleBody Neue', sans-serif;
+  --font-mes-weight: normal;
   
-  /* OPCIÓN 2: Nunito (números limpios y redondos) */
-  /* --font-numeros: 'Nunito', sans-serif; */
+  /* Año: Mistrully → Pacifico (alternativa) */
+  --font-anio: 'Pacifico', cursive;
   
-  /* OPCIÓN 3: Comfortaa (muy redondeada) */
-  /* --font-numeros: 'Comfortaa', sans-serif; */
+  /* Días de la semana: Poppins Medium → peso 500 */
+  --font-dias-semana: 'Poppins', sans-serif;
+  --font-dias-semana-weight: 500;
   
-  /* Resto de fuentes */
-  --font-bubbleboddy: 'Fredoka', sans-serif;
-  --font-mistrully: 'Pacifico', cursive;
-  --font-poppins: 'Poppins', sans-serif;
+  /* Números del calendario: BubbleBody Neue (normal) */
+  --font-numeros: 'BubbleBody Neue', sans-serif;
+  --font-numeros-weight: normal;
+  
+  /* Texto footer: BubbleBody Neue (delgada) */
+  --font-footer: 'BubbleBody Neue', sans-serif;
+  --font-footer-weight: 300;
 }
 
 body {
